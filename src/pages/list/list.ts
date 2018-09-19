@@ -10,7 +10,7 @@ import { ItemDetailsPage } from '../item-details/item-details';
 })
 export class ListPage {
   icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+  items: Array<{title: string, note: string, icon: string,var: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
@@ -21,6 +21,7 @@ export class ListPage {
       this.items.push({
         title: 'Item ' + i,
         note: 'This is item #' + i,
+        var:'input',
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }
