@@ -7,19 +7,25 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <h3 text-center *ngIf="selectedItem">
+<ion-content *ngIf="selectedItem">
+  <h3 text-center >
     {{selectedItem.title}}
     <ion-icon [name]="selectedItem.icon"></ion-icon>
   </h3>
-  <h4 text-center *ngIf="selectedItem">
+  <h4 text-center>
     var <b>{{selectedItem.var}}</b>
   </h4>
+  <h4 text-center *ngIf="selectedItem.title == 'Nivel 1'">
+    in   <b>{{ num_1}}</b>
+    out  <b> ?</b>
+    goal <b >3</b>
+  </h4>
+  <h4 text-center *ngIf="selectedItem.title == 'Nivel 1'">
+    resultado:
+  </h4>
+  <h1 text-center>{{resultado}}</h1>
+
  <ion-list>
-  <ion-item>
-    <ion-label floating>Code</ion-label>
-    <ion-input type="text" value=""></ion-input>
-  </ion-item>
  </ion-list>
-<button ion-button>Set</button>
+<button ion-button (click)="start();" *ngIf="selectedItem" class="btn">start</button>
 </ion-content>
