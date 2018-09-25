@@ -13,6 +13,7 @@ $colors: (
   dark:       #222
 );
 
+$toolbar-md-background: color($colors,dark);
 
 @import "ionic.theme.default";
 @import "ionic.ionicons";

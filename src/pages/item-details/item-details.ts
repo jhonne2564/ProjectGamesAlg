@@ -9,42 +9,24 @@ import { NavController, NavParams, AlertController } from 'ionic-angular';
 })
 export class ItemDetailsPage {
   selectedItem: any;
-  num_1:      number;
-  numero:     number;
-  resultado:  string;
+  area:         string;
+  correcto1:    string;
+  correcto2:    string;
+  resultado:    string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alert: AlertController) {
     this.selectedItem = navParams.get('item');
-    this.num_1 = 2;
+
   }
 
   start(){
-    let alert = this.alert.create({
-      title: 'mucha suerte!',
-      inputs: [
-        {
-          name: 'signo',
-          placeholder: 'digita el signo'
-        },
-        {
-          name: 'numero',
-          placeholder: 'digita el numero'
-        }
-      ],
-      buttons: [
-        {
-          text: 'ok',
-          handler: (data) =>{
-            data.completed = false;
-            if(data.signo == '+' && data.numero == 1){
-              this.resultado = "true";
-            }else{
-              this.resultado = "false";
-            }
-          }
-        }
-      ]
-    });
-    alert.present();
+    this.correcto1 = "input + 1";
+    this.correcto2 = "1 + input";
+
+    if(this.area == this.correcto1 || this.area == this.correcto2){
+      this.resultado = "true";
+    }else{
+      this.resultado = "false";
+    }
   }
 }

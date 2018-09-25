@@ -1,3 +1,29 @@
 page-hello-ionic {
-
+  .contenido{
+    background-color: black;
+    .card{
+      position: absolute;
+      margin-top: 30%;
+      padding: 5%;
+      background: black;
+    }
+    .btn1{
+      position: absolute;
+      margin-top: 100%;
+      margin-left: 6%;
+      width: 80%;
+    }
+    .btn2{
+      position: absolute;
+      margin-top: 113%;
+      margin-left: 6%;
+      width: 80%;
+    }
+    .btn3{
+      position: absolute;
+      margin-top: 126%;
+      margin-left: 6%;
+      width: 80%;
+    }
+  }
 }

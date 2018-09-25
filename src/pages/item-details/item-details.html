@@ -16,14 +16,23 @@
     var <b>{{selectedItem.var}}</b>
   </h4>
   <h4 text-center *ngIf="selectedItem.title == 'Nivel 1'">
-    in   <b>{{ num_1}}</b>
+    in   <b>2</b>
     out  <b> ?</b>
     goal <b >3</b>
   </h4>
-  <h4 text-center *ngIf="selectedItem.title == 'Nivel 1'">
+  <h4 text-center *ngIf="selectedItem.title == 'Nivel 2'">
+    in   <b>-7</b>
+    out  <b> ?</b>
+    goal <b>false</b>
+  </h4>
+  <h4 text-center>
     resultado:
   </h4>
   <h1 text-center>{{resultado}}</h1>
+
+  <ion-item>
+    <ion-textarea [(ngModel)]="area"></ion-textarea>
+  </ion-item>
 
  <ion-list>
  </ion-list>
